@@ -27,8 +27,8 @@ class ContentListTableViewCell: UITableViewCell {
     var model : ContentsListCellModel? {
         didSet {
             if let data = model {
-                self.profileImage.kf.setImage(with: URL(string :data.profileImageUrl)!, options: [.transition(.fade(0.4))])
-                self.contentImage.kf.setImage(with: URL(string :data.imageUrl)!, options: [.transition(.fade(0.4))])
+                self.profileImage.kf.setImage(with: URL(string :data.profileImageUrl), placeholder: UIImage(named:"profileIcon")!, options: [.transition(.fade(0.4))])
+                self.contentImage.kf.setImage(with: URL(string :data.imageUrl), placeholder: UIImage(named:"noImgWidth")!, options: [.transition(.fade(0.4))])
                 self.nickName.text = data.nickName
                 self.descLabel.text = data.description
               

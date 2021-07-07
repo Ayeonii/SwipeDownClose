@@ -50,7 +50,7 @@ extension ContentDetailViewController {
     func setupUI() {
         self.descLabel.text = desc
         
-        self.imageView.kf.setImage(with: URL(string :imageUrl)!, options: [.transition(.fade(0.4))])
+        self.imageView.kf.setImage(with: URL(string :imageUrl), placeholder: UIImage(named:"profileIcon")!, options: [.transition(.fade(0.4))])
         self.imageView.contentMode = .scaleAspectFill
         self.imageView.layer.masksToBounds = true
         self.imageView.isUserInteractionEnabled = true
