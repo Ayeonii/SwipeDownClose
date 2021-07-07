@@ -34,6 +34,11 @@
 		CC1A5CBC2695701900E8508C /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A5CBB2695701900E8508C /* UIViewExtension.swift */; };
 		CC1A5CBE2695702400E8508C /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A5CBD2695702400E8508C /* UIViewControllerExtension.swift */; };
 		CC1A5CC02695702D00E8508C /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A5CBF2695702D00E8508C /* UIButtonExtension.swift */; };
+		CC1A5CC7269571D000E8508C /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A5CC5269571D000E8508C /* FilterViewController.swift */; };
+		CC1A5CC8269571D000E8508C /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC1A5CC6269571D000E8508C /* FilterViewController.xib */; };
+		CC1A5CCC269571FA00E8508C /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A5CCA269571FA00E8508C /* FilterTableViewCell.swift */; };
+		CC1A5CCD269571FA00E8508C /* FilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC1A5CCB269571FA00E8508C /* FilterTableViewCell.xib */; };
+		CC1A5CCF2695724300E8508C /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A5CCE2695724300E8508C /* FilterViewModel.swift */; };
 		F4F52AC5E47939D5FA2B410B /* Pods_SwipeDownClose.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1A49ABF56B8154C4DB29FE /* Pods_SwipeDownClose.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +86,11 @@
 		CC1A5CBB2695701900E8508C /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		CC1A5CBD2695702400E8508C /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		CC1A5CBF2695702D00E8508C /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		CC1A5CC5269571D000E8508C /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		CC1A5CC6269571D000E8508C /* FilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
+		CC1A5CCA269571FA00E8508C /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
+		CC1A5CCB269571FA00E8508C /* FilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterTableViewCell.xib; sourceTree = "<group>"; };
+		CC1A5CCE2695724300E8508C /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		CC56616003A489C71BE49CC3 /* Pods-SwipeDownCloseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeDownCloseTests.debug.xcconfig"; path = "Target Support Files/Pods-SwipeDownCloseTests/Pods-SwipeDownCloseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CDFDB28270944F7062D859FD /* Pods-SwipeDownClose.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeDownClose.debug.xcconfig"; path = "Target Support Files/Pods-SwipeDownClose/Pods-SwipeDownClose.debug.xcconfig"; sourceTree = "<group>"; };
 		FB34D71E3C379AE81EA41889 /* Pods-SwipeDownCloseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeDownCloseTests.release.xcconfig"; path = "Target Support Files/Pods-SwipeDownCloseTests/Pods-SwipeDownCloseTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -200,19 +210,20 @@
 		CC1A5C8F269562B700E8508C /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				CC1A5C922695637E00E8508C /* ContentListPage */,
+				CC1A5C922695637E00E8508C /* ContentMainPage */,
+				CC1A5CC12695716300E8508C /* ContentFilterPage */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
 		};
-		CC1A5C922695637E00E8508C /* ContentListPage */ = {
+		CC1A5C922695637E00E8508C /* ContentMainPage */ = {
 			isa = PBXGroup;
 			children = (
 				CC1A5C952695639700E8508C /* Model */,
 				CC1A5C942695639200E8508C /* ViewModel */,
 				CC1A5C932695638B00E8508C /* View */,
 			);
-			path = ContentListPage;
+			path = ContentMainPage;
 			sourceTree = "<group>";
 		};
 		CC1A5C932695638B00E8508C /* View */ = {
@@ -290,6 +301,42 @@
 				CC1A5CBF2695702D00E8508C /* UIButtonExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CC1A5CC12695716300E8508C /* ContentFilterPage */ = {
+			isa = PBXGroup;
+			children = (
+				CC1A5CC3269571AD00E8508C /* ViewModel */,
+				CC1A5CC2269571A700E8508C /* View */,
+			);
+			path = ContentFilterPage;
+			sourceTree = "<group>";
+		};
+		CC1A5CC2269571A700E8508C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC1A5CC5269571D000E8508C /* FilterViewController.swift */,
+				CC1A5CC6269571D000E8508C /* FilterViewController.xib */,
+				CC1A5CC9269571D500E8508C /* SupportingView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC1A5CC3269571AD00E8508C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CC1A5CCE2695724300E8508C /* FilterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CC1A5CC9269571D500E8508C /* SupportingView */ = {
+			isa = PBXGroup;
+			children = (
+				CC1A5CCA269571FA00E8508C /* FilterTableViewCell.swift */,
+				CC1A5CCB269571FA00E8508C /* FilterTableViewCell.xib */,
+			);
+			path = SupportingView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,6 +422,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC1A5CC8269571D000E8508C /* FilterViewController.xib in Resources */,
 				CC1A5CB726956F7D00E8508C /* FilterTagCollectionViewCell.xib in Resources */,
 				CC1A5C692695619500E8508C /* LaunchScreen.storyboard in Resources */,
 				CC1A5C662695619500E8508C /* Assets.xcassets in Resources */,
@@ -383,6 +431,7 @@
 				CC1A5C9D269564FF00E8508C /* myJson.json in Resources */,
 				CC1A5CAA26956E2400E8508C /* FilterCategoryCollectionViewCell.xib in Resources */,
 				CC1A5CA326956D6200E8508C /* ContentMainViewController.xib in Resources */,
+				CC1A5CCD269571FA00E8508C /* FilterTableViewCell.xib in Resources */,
 				CC1A5CB326956E9F00E8508C /* ContentListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,11 +517,14 @@
 				CC1A5CA926956E2400E8508C /* FilterCategoryCollectionViewCell.swift in Sources */,
 				CC1A5C5D2695619300E8508C /* AppDelegate.swift in Sources */,
 				CC1A5CBE2695702400E8508C /* UIViewControllerExtension.swift in Sources */,
+				CC1A5CC7269571D000E8508C /* FilterViewController.swift in Sources */,
 				CC1A5CAD26956E4400E8508C /* FilterTagTableViewCell.swift in Sources */,
 				CC1A5CA226956D6200E8508C /* ContentMainViewController.swift in Sources */,
+				CC1A5CCF2695724300E8508C /* FilterViewModel.swift in Sources */,
 				CC1A5CBC2695701900E8508C /* UIViewExtension.swift in Sources */,
 				CC1A5C97269563AE00E8508C /* ContentMainCodable.swift in Sources */,
 				CC1A5C9F26956CA900E8508C /* CallJsonData.swift in Sources */,
+				CC1A5CCC269571FA00E8508C /* FilterTableViewCell.swift in Sources */,
 				CC1A5C99269563B900E8508C /* ContentMainModel.swift in Sources */,
 				CC1A5CC02695702D00E8508C /* UIButtonExtension.swift in Sources */,
 				CC1A5C5F2695619300E8508C /* SceneDelegate.swift in Sources */,

@@ -82,6 +82,8 @@ class ContentMainViewModel {
 extension ContentMainViewModel {
     
     func callDataAPI() {
+        //추후 필터 선택에 따른 request 추가하기
+        
         CallJsonData.callContentList()
             .retry(2)
             .subscribe(onNext: { [weak self] data in

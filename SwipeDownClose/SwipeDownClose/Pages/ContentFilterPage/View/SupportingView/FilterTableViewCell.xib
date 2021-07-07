@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="72" id="xAK-pO-xme" customClass="FilterTableViewCell" customModule="SwipeDownClose" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xAK-pO-xme" id="KvX-j5-zmw">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUr-a6-NAQ">
+                        <rect key="frame" x="16" y="26" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="2X0-Y8-lAk"/>
+                            <constraint firstAttribute="width" secondItem="bUr-a6-NAQ" secondAttribute="height" id="V5G-wR-85h"/>
+                        </constraints>
+                        <color key="tintColor" systemColor="systemPinkColor"/>
+                        <state key="normal" image="checkmark.circle" catalog="system"/>
+                        <state key="selected" image="checkmark.circle.fill" catalog="system"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KiT-VR-kcn">
+                        <rect key="frame" x="52" y="27" width="252" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="KiT-VR-kcn" firstAttribute="leading" secondItem="bUr-a6-NAQ" secondAttribute="trailing" constant="16" id="7Pb-6H-oaw"/>
+                    <constraint firstItem="bUr-a6-NAQ" firstAttribute="leading" secondItem="KvX-j5-zmw" secondAttribute="leading" constant="16" id="BS9-cB-Fx2"/>
+                    <constraint firstItem="KiT-VR-kcn" firstAttribute="centerY" secondItem="bUr-a6-NAQ" secondAttribute="centerY" id="YOD-Hu-uef"/>
+                    <constraint firstItem="bUr-a6-NAQ" firstAttribute="centerY" secondItem="KvX-j5-zmw" secondAttribute="centerY" id="tMc-sZ-Pdi"/>
+                    <constraint firstAttribute="trailing" secondItem="KiT-VR-kcn" secondAttribute="trailing" constant="16" id="wf5-lj-NZb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="EsD-iu-o0P"/>
+            <connections>
+                <outlet property="checkBtn" destination="bUr-a6-NAQ" id="zFF-1l-iTl"/>
+                <outlet property="listLabel" destination="KiT-VR-kcn" id="Jg0-vE-A55"/>
+            </connections>
+            <point key="canvasLocation" x="-23.188405797101453" y="97.098214285714278"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

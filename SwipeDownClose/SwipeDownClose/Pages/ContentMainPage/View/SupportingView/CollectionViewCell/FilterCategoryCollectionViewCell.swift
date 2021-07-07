@@ -49,8 +49,8 @@ extension FilterCategoryCollectionViewCell {
     func setupUI() {
         self.layer.cornerRadius = 5
         self.filterBtn.setBackgroundColor(.lightGray, forState: .normal)
-        self.filterBtn.setBackgroundColor(.systemTeal, forState: .selected)
-        self.filterBtn.setBackgroundColor(.systemTeal.withAlphaComponent(0.7), forState: .highlighted)
+        self.filterBtn.setBackgroundColor(.systemPink, forState: .selected)
+        self.filterBtn.setBackgroundColor(.systemPink.withAlphaComponent(0.7), forState: .highlighted)
     }
     
     func bindBtn(){
