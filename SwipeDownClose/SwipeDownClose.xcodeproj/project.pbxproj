@@ -39,6 +39,8 @@
 		CC1A5CCC269571FA00E8508C /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A5CCA269571FA00E8508C /* FilterTableViewCell.swift */; };
 		CC1A5CCD269571FA00E8508C /* FilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC1A5CCB269571FA00E8508C /* FilterTableViewCell.xib */; };
 		CC1A5CCF2695724300E8508C /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A5CCE2695724300E8508C /* FilterViewModel.swift */; };
+		CC1A5CD42695736F00E8508C /* ContentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A5CD22695736F00E8508C /* ContentDetailViewController.swift */; };
+		CC1A5CD52695736F00E8508C /* ContentDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC1A5CD32695736F00E8508C /* ContentDetailViewController.xib */; };
 		F4F52AC5E47939D5FA2B410B /* Pods_SwipeDownClose.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1A49ABF56B8154C4DB29FE /* Pods_SwipeDownClose.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +93,8 @@
 		CC1A5CCA269571FA00E8508C /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		CC1A5CCB269571FA00E8508C /* FilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterTableViewCell.xib; sourceTree = "<group>"; };
 		CC1A5CCE2695724300E8508C /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
+		CC1A5CD22695736F00E8508C /* ContentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewController.swift; sourceTree = "<group>"; };
+		CC1A5CD32695736F00E8508C /* ContentDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentDetailViewController.xib; sourceTree = "<group>"; };
 		CC56616003A489C71BE49CC3 /* Pods-SwipeDownCloseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeDownCloseTests.debug.xcconfig"; path = "Target Support Files/Pods-SwipeDownCloseTests/Pods-SwipeDownCloseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CDFDB28270944F7062D859FD /* Pods-SwipeDownClose.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeDownClose.debug.xcconfig"; path = "Target Support Files/Pods-SwipeDownClose/Pods-SwipeDownClose.debug.xcconfig"; sourceTree = "<group>"; };
 		FB34D71E3C379AE81EA41889 /* Pods-SwipeDownCloseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeDownCloseTests.release.xcconfig"; path = "Target Support Files/Pods-SwipeDownCloseTests/Pods-SwipeDownCloseTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -212,6 +216,7 @@
 			children = (
 				CC1A5C922695637E00E8508C /* ContentMainPage */,
 				CC1A5CC12695716300E8508C /* ContentFilterPage */,
+				CC1A5CD02695733800E8508C /* ContentDetailPage */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -339,6 +344,23 @@
 			path = SupportingView;
 			sourceTree = "<group>";
 		};
+		CC1A5CD02695733800E8508C /* ContentDetailPage */ = {
+			isa = PBXGroup;
+			children = (
+				CC1A5CD12695734900E8508C /* View */,
+			);
+			path = ContentDetailPage;
+			sourceTree = "<group>";
+		};
+		CC1A5CD12695734900E8508C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC1A5CD22695736F00E8508C /* ContentDetailViewController.swift */,
+				CC1A5CD32695736F00E8508C /* ContentDetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -423,6 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC1A5CC8269571D000E8508C /* FilterViewController.xib in Resources */,
+				CC1A5CD52695736F00E8508C /* ContentDetailViewController.xib in Resources */,
 				CC1A5CB726956F7D00E8508C /* FilterTagCollectionViewCell.xib in Resources */,
 				CC1A5C692695619500E8508C /* LaunchScreen.storyboard in Resources */,
 				CC1A5C662695619500E8508C /* Assets.xcassets in Resources */,
@@ -521,6 +544,7 @@
 				CC1A5CAD26956E4400E8508C /* FilterTagTableViewCell.swift in Sources */,
 				CC1A5CA226956D6200E8508C /* ContentMainViewController.swift in Sources */,
 				CC1A5CCF2695724300E8508C /* FilterViewModel.swift in Sources */,
+				CC1A5CD42695736F00E8508C /* ContentDetailViewController.swift in Sources */,
 				CC1A5CBC2695701900E8508C /* UIViewExtension.swift in Sources */,
 				CC1A5C97269563AE00E8508C /* ContentMainCodable.swift in Sources */,
 				CC1A5C9F26956CA900E8508C /* CallJsonData.swift in Sources */,

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContentDetailViewController" customModule="SwipeDownClose" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="8cP-4e-puo">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TIe-3r-7VA">
+                    <rect key="frame" x="0.0" y="74" width="414" height="414"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="TIe-3r-7VA" secondAttribute="height" multiplier="1:1" id="h1G-pr-epe"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgw-Ub-Fyo">
+                    <rect key="frame" x="16" y="498" width="382" height="187"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="miD-6J-Znp"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="miD-6J-Znp" firstAttribute="trailing" secondItem="TIe-3r-7VA" secondAttribute="trailing" id="OZe-4O-son"/>
+                <constraint firstItem="TIe-3r-7VA" firstAttribute="leading" secondItem="miD-6J-Znp" secondAttribute="leading" id="RxB-YC-zOH"/>
+                <constraint firstItem="Dgw-Ub-Fyo" firstAttribute="top" secondItem="TIe-3r-7VA" secondAttribute="bottom" constant="10" id="SLC-1I-BIZ"/>
+                <constraint firstItem="Dgw-Ub-Fyo" firstAttribute="leading" secondItem="miD-6J-Znp" secondAttribute="leading" constant="16" id="ZAr-QC-18A"/>
+                <constraint firstItem="miD-6J-Znp" firstAttribute="trailing" secondItem="Dgw-Ub-Fyo" secondAttribute="trailing" constant="16" id="dFY-Sw-3cM"/>
+                <constraint firstItem="TIe-3r-7VA" firstAttribute="top" secondItem="miD-6J-Znp" secondAttribute="top" constant="30" id="ffU-Qn-wua"/>
+            </constraints>
+            <point key="canvasLocation" x="66.666666666666671" y="79.6875"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
