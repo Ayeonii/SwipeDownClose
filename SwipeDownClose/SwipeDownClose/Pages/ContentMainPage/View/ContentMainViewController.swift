@@ -52,16 +52,21 @@ class ContentMainViewController: UIViewController {
 extension ContentMainViewController {
    
     func bindTableView(){
+        
         tableView.rx.setDelegate(self)
             .disposed(by: disposeBag)
     
         viewModel?.mainSectionSubject
-            .bind(to: tableView.rx.items(dataSource: viewModel!.dataSource))
+            .debug()
+            .bind(to:
+                tableView.rx.items(dataSource: viewModel!.dataSource)
+            )
             .disposed(by: disposeBag)
         
         viewModel?.mainSectionSubject
             .asDriver(onErrorJustReturn: [])
             .drive(onNext: { [weak self] _ in
+                
                 guard let self = self else { return }
                 
                 if self.isPaging {

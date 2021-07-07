@@ -44,9 +44,10 @@ class ContentListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        makeImageCircle(profileImage)
         makeAspectFill(profileImage)
         makeAspectFill(contentImage)
-        
+      
         bindEvent()
     }
     
@@ -63,6 +64,10 @@ extension ContentListTableViewCell {
     func makeAspectFill(_ image : UIImageView) {
         image.contentMode = .scaleAspectFill
         image.clipsToBounds = true
+    }
+    
+    func makeImageCircle(_ image : UIImageView) {
+        image.layer.cornerRadius = image.frame.size.width / 2
     }
     
     func bindEvent() {

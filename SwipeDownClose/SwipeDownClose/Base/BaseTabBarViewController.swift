@@ -16,7 +16,7 @@ class BaseTabBarViewController: UITabBarController {
     
     func setVCs () {
         let contentVC = ContentMainViewController(nibName: "ContentMainViewController", bundle: nil)
-        contentVC.tabBarItem = UITabBarItem(title: "콘텐츠", image: UIImage(named: ""), selectedImage: UIImage(named: ""))
+        //contentVC.tabBarItem = UITabBarItem(title: "콘텐츠", image: UIImage(named: ""), selectedImage: UIImage(named: ""))
 
         self.viewControllers = [
             UINavigationController(rootViewController: contentVC),

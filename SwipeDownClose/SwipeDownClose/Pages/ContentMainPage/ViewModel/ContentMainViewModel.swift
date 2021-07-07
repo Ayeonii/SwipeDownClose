@@ -31,9 +31,8 @@ class ContentMainViewModel {
     private var disposeBag = DisposeBag()
 
     let dataSource : RxTableViewSectionedAnimatedDataSource<ContentsMainSectionModel>
-    let mainSectionSubject = PublishSubject<[ContentsMainSectionModel]>()
+    let mainSectionSubject = BehaviorSubject<[ContentsMainSectionModel]>(value : [])
    
-    
     let filterCategory : [FilterCategoryType] = [.order, .space, .residence]
     let filterSubject = BehaviorSubject<[FilterCategoryType]>(value: [.order, .space, .residence])
     
@@ -101,7 +100,9 @@ extension ContentMainViewModel {
     
     private func emitEvent(res : [ContentListData]?) {
         guard let data = res else {return}
+        
         var cellModels : [ContentsMainSectionModel] = []
+        
         if !self.selectedFilter.isEmpty {
             cellModels.append(
                 ContentsMainSectionModel.FirstSection(content: [
@@ -117,6 +118,7 @@ extension ContentMainViewModel {
         cellModels.append(
             ContentsMainSectionModel.SecondSection(content: contentsCell)
         )
+        
         self.mainSectionSubject.onNext(cellModels)
         
     }

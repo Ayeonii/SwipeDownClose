@@ -26,9 +26,9 @@ class CallJsonData {
                 let data = try Data(contentsOf: fileUrl)
                 
                 let decoder = JSONDecoder()
-                let shoppingList = try decoder.decode(ContentListCodable.self, from: data)
+                let contentList = try decoder.decode(ContentListCodable.self, from: data)
 
-                observer.onNext(shoppingList)
+                observer.onNext(contentList)
                 observer.onCompleted()
             } catch {
                 observer.onError(error)
