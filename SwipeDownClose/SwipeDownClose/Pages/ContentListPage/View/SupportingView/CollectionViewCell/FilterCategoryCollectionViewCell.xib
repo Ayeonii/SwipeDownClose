@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="HGt-Us-dbF" customClass="FilterCategoryCollectionViewCell" customModule="SwipeDownClose" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="195" height="75"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="195" height="75"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WnE-zg-20K">
+                        <rect key="frame" x="0.0" y="0.0" width="195" height="75"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="O4p-zU-fwK"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="xjT-iM-71Q"/>
+                        </constraints>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="9oi-XI-JR7"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="WnE-zg-20K" secondAttribute="bottom" id="F3E-cu-dJl"/>
+                <constraint firstItem="WnE-zg-20K" firstAttribute="top" secondItem="HGt-Us-dbF" secondAttribute="top" id="Qyb-EA-aj7"/>
+                <constraint firstAttribute="trailing" secondItem="WnE-zg-20K" secondAttribute="trailing" id="TPx-Xl-Hmi"/>
+                <constraint firstItem="WnE-zg-20K" firstAttribute="top" secondItem="HGt-Us-dbF" secondAttribute="top" id="XZt-Fi-Bmg"/>
+                <constraint firstItem="WnE-zg-20K" firstAttribute="leading" secondItem="HGt-Us-dbF" secondAttribute="leading" id="cP3-mW-J3b"/>
+                <constraint firstAttribute="bottom" secondItem="WnE-zg-20K" secondAttribute="bottom" id="mOL-4b-tb1"/>
+            </constraints>
+            <size key="customSize" width="396" height="75"/>
+            <connections>
+                <outlet property="buttonMaxWidthConstraint" destination="xjT-iM-71Q" id="MRu-mN-4Lo"/>
+                <outlet property="filterBtn" destination="WnE-zg-20K" id="Mqe-sb-D47"/>
+            </connections>
+            <point key="canvasLocation" x="337.68115942028987" y="138.95089285714286"/>
+        </collectionViewCell>
+    </objects>
+</document>
